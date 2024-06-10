@@ -12,7 +12,14 @@
 </head>
 
 <body class="m-3">
-  <h1>Daftar data absensi</h1>
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    tambah
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active" href="form-absensi.html">tambah absensi siswa</a></li>
+  </ul>
+</div>
 
   <table class="table" id="daftar-absensi">
     <thead>
@@ -32,7 +39,7 @@
     </tbody>
   </table>
   <img src="loader.gif" style="width: 1.8em; display: block" id="loader">
-  <a href="form-absensi siswa.html">Tambah data siswa</a>
+  <a href="form-absensi siswa.html"></a>
 
   <script type="module">
     import { ambilDaftarAbsensi, formatangka, hapusabsensi } from './main.js';
@@ -77,6 +84,15 @@
 
     });
   </script>
+  <footer class="py-3 bg-dark-subtle mt-auto">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary"></a></li>
+      <li class="nav-item"><a href="#" id="link-login" class="nav-link px-2 text-body-secondary"></a></li>
+   
+    </ul>
+    <p class="text-center text-body-secondary">&copy; absensi kelas smk plus insan cemerlang 2024</p>
+  </footer>
 </body>
+
 
 </html>
