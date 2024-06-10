@@ -17,7 +17,7 @@
   <table class="table" id="daftar-absensi">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">no</th>
         <th scope="col">tanggal</th>
         <th scope="col">nis</th>
         <th scope="col">nama</th>
@@ -45,7 +45,7 @@
       daftarAbsensi.forEach((data) => {
         elemenDaftar.append(
           '<tr>'+
-          '<td>'+ nomor + '<td>' +
+          '<th>'+ nomor + '<th>' +
           '<td>'+ data.tanggal + '<td>'+
           '<th>' + data.nis + '</th>' +
           '<td>' + data.nama + '</td>' +
