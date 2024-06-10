@@ -54,7 +54,7 @@
   <script type="module">
     import { tambahAbsensi } from './main.js';
 
-    let tombolTamabah = document.getElementById('tombol-tambah');
+    let tombolTambah = document.getElementById('tombol-tambah');
     let elemenTanggal = document.getElementById('input-nama');
     let elemenNis = document.getElementById('input-nis');
     let elemenNama = document.getElementById('input-Nama');
@@ -64,9 +64,9 @@
     let elemenketerangan = document.getElementById('input-keterangan');
     let loader = document.getElementById('loader');
 
-    tombolTamabah.addEventListener('click', async function(e) {
+    tombolTambah.addEventListener('click', async function(e) {
       e.preventDefault();
-      tombolTamabah.setAttribute('disabled', 'disabled');
+      tombolTambah.setAttribute('disabled', 'disabled');
       loader.style.display = "block";
       await tambahAbsensi(elemenTanggal.value, elemenNis.value, elemenNama.value, elemenAlamat.value, elemenNoTlpn.value, elemenKelas.value, elemenKeterangan.value);
       window.location.href = 'index.html'

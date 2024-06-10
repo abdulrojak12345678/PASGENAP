@@ -64,7 +64,7 @@ export async function tambahAbsensi(tanggal, nis, nama, alamat, noTlpon, kelas, 
     });
     console.log('berhasil menambah absensi'+ dok )
   } catch (e) {
-  console.log('Gagal menambah daftar absensi' + e);
+  console.log('Gagal menambah absensi' + e);
   }
 }
 
