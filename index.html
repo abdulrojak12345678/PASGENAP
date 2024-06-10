@@ -35,7 +35,7 @@
   <a href="form-absensi siswa.html">Tambah data siswa</a>
 
   <script type="module">
-    import { ambilDaftarAbsensi, formatangka, hapussiswa } from './main.js';
+    import { ambilDaftarAbsensi, formatangka, hapusabsensi } from './main.js';
 
     $(document).ready(async function() {
       let elemenDaftar = $("#daftar-absensi > tbody")
@@ -44,7 +44,7 @@
 
       daftarAbsensi.forEach((data) => {
         elemenDaftar.append(
-          '<tr>' 
+          '<tr>'+
           '<td>'+ nomor + '<td>' +
           '<td>'+ data.tanggal + '<td>'+
           '<th>' + data.nis + '</th>' +
