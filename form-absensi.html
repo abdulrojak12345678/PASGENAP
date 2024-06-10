@@ -55,11 +55,11 @@
     import { tambahAbsensi } from './main.js';
 
     let tombolTamabah = document.getElementById('tombol-tambah');
-    let elementanggal = document.getElementById('input-nama');
-    let elemennis = document.getElementById('input-nis');
+    let elemenTanggal = document.getElementById('input-nama');
+    let elemenNis = document.getElementById('input-nis');
     let elemenNama = document.getElementById('input-Nama');
     let elemenalamat = document.getElementById('input-alamat');
-    let elemennoTlpon = document.getElementById('input-noTlpon');
+    let elemenNoTlpon = document.getElementById('input-noTlpon');
     let elemenkelas = document.getElementById('input-kelas');
     let elemenketerangan = document.getElementById('input-keterangan');
     let loader = document.getElementById('loader');
@@ -68,7 +68,7 @@
       e.preventDefault();
       tombolTamabah.setAttribute('disabled', 'disabled');
       loader.style.display = "block";
-      await tambahAbsensi(elementanggal.value, elemennis.value, elemenNama.value, elemenAlamat.value, elemenNoTlpn.value, elemenkelas.value, elemenketerangan.value);
+      await tambahAbsensi(elemenTanggal.value, elemenNis.value, elemenNama.value, elemenAlamat.value, elemenNoTlpn.value, elemenKelas.value, elemenKeterangan.value);
       window.location.href = 'index.html'
     });
   </script>
