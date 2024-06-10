@@ -25,7 +25,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export async function ambilDaftarabsensi() {
+export async function ambilDaftarAbsensi() {
   const refDokumen = collection(db,"absensi");
   const kuery = query(refDokumen,orderBy("nama"));
   const cuplikankuery = await getDocs(kuery);
@@ -35,12 +35,12 @@ export async function ambilDaftarabsensi() {
       hasil.push({ 
      id:dok.id, 
       tanggal: dok.data().tanggal,
-      nis:dok.data().nis,
+      nis: dok.data().nis,
       nama: dok.data().nama,
-      alamat:dok.data().alamat,
-      noTlpon:dok.data(). noTlpon,
-      kelas:dok.data().kelas,
-      keterangan:dok.data(). keterangan
+      alamat: dok.data().alamat,
+      noTlpon: dok.data().noTlpon,
+      kelas: dok.data().kelas,
+      keterangan: dok.data().keterangan
 
       });
   });
@@ -51,7 +51,7 @@ export function formatangka(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-export async function tambahdatasiswa(tanggal, nis, nama,alamat, noTlpon,kelas, keterangan) {
+export async function tambahdatasiswa(tanggal, nis, nama, alamat, noTlpon, kelas, keterangan) {
   try {
     const dokRef = await addDoc(collection(db,'absensi'),{
    tanggal: tanggal,

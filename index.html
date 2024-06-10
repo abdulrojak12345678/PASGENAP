@@ -35,15 +35,15 @@
   <a href="form-absensi siswa.html">Tambah data siswa</a>
 
   <script type="module">
-    import { ambilDaftarabsensi, formatangka, hapussiswa } from './main.js';
+    import { ambilDaftarAbsensi, formatangka, hapussiswa } from './main.js';
 
     $(document).ready(async function() {
-      let elementdaftar = $("#absensi > tbody")
-      let daftarsiswa = await ambilDaftarabsensi();
+      let elemenDaftar = $("#daftar-absensi > tbody")
+      let daftarAbsensi = await ambilDaftarAbsensi();
       let nomor = 1;
 
-      daftarabsensi.forEach((data) => {
-        elementdaftar.append(
+      daftarAbsensi.forEach((data) => {
+        elemenDaftar.append(
           '<tr>' 
           '<td>'+ nomor + '<td>' +
           '<td>'+ data.tanggal + '<td>'+
@@ -72,7 +72,7 @@
         location.reload();
       });
    $('.link-ubah').click(async function() {
-        window.location.replace('ubah-absensi siswa.html?docId=' + $(this).attr('data'));
+        window.location.replace('ubah-absensi.html?docId=' + $(this).attr('data'));
       })
 
     });
