@@ -49,27 +49,34 @@
   <a class="mt-1" href="index.html">Lihat Daftar Siswa</a>
 
   <script type="module">
-    import { ambildatasiswa, ubah } from './main.js';
+      import { tambahdatasiswa } from './main.js';
 
-    let tombolUbah = document.getElementById('tombol-ubah');
-    let elemenNamaProduk = document.getElementById('input-nama');
-    let elemenHarga = document.getElementById('input-harga');
-    let elemenStok = document.getElementById('input-stok');
+   let tombolTambah = document.getElementById('tombol-Tambah');
+   let elementanggal = document.getElementById('input-tanggal');
+   let elemennis = document.getElementById('input-nis');
+   let elemennama = document.getElementById('input-nama');
+   let elemenalamat = document.getElementById('input-alamat');
+   let elemennoTlpon = document.getElementById('input-noTlpon');
+   let elemenkelas = document.getElementById('input-kelas');
+   let elemenketerangan = document.getElementById('input-keterangan');
+   
     let loader = document.getElementById('loader');
     const queryString = window.location.search
     const parameterURL = new URLSearchParams(queryString);
     const docId = parameterURL.get('docId')
-    const produk = await ambildatasiswa(docId);
+    const produk = await ambilAbsensi(docId);
 
-    elementanggal.value = tanggal;
-    elemenn.value = nis;
-    elemennama.value = nama;
-    elemennoTlpon.value = 
-
+    elemenTanggal.value = absensi.tanggal;
+    elemenNis.value = absensi.nis;
+    elemenNama.value = absensi.nama;
+    elemenAlamat.value = absensi.alamat;
+    elemenNoTlpn.value = absensi.noTlpn;
+    elemenKelas.value = absensi.kelas;
+    elemenKeterangan.value = absensi.keterangan;
 
     tombolUbah.addEventListener('click', async function(el) {
       el.preventDefault();
-      await ubahdatasiswa(docId, elementanggal.value,elemennis.value,elemenNama.value, elemenalamat.value, elemennTlpon.value, elemenkelas.value, elemenketerangan.value);
+      await ubahAbsensi(docId, elementanggal.value,elemennis.value,elemenNama.value, elemenalamat.value, elemennTlpon.value, elemenkelas.value, elemenketerangan.value);
       window.location.href = 'index.html';
     });
   </script>

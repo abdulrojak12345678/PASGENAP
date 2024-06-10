@@ -51,7 +51,7 @@ export function formatangka(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-export async function tambahdatasiswa(tanggal, nis, nama, alamat, noTlpon, kelas, keterangan) {
+export async function tambahAbsensi(tanggal, nis, nama, alamat, noTlpon, kelas, keterangan) {
   try {
     const dokRef = await addDoc(collection(db,'absensi'),{
    tanggal: tanggal,
@@ -62,26 +62,31 @@ export async function tambahdatasiswa(tanggal, nis, nama, alamat, noTlpon, kelas
    kelas: kelas,
    keterangan: keterangan
     });
-    console.log('berhasil menambah data siswa'+ dok )
+    console.log('berhasil menambah absensi'+ dok )
   } catch (e) {
-  console.log('Gagal menambah daftar data siswa' + e);
+  console.log('Gagal menambah daftar absensi' + e);
   }
 }
 
 export async function hapusabsensi (docId) {
-  await deleteDoc(doc(db,"absensi-siswa",docId));
+  await deleteDoc(doc(db,"absensi",docId));
 }
 
-export async function ubahdatasiswa(docId, nama, harga, stok) {
-  await updateDoc(doc(db, "absensi-siswa", docId), {
-    nama: nama,
-    harga: harga, 
-    stok: stok
+export async function ubahAbsensi(docid, tanggal, nis, nama, alamat, noTlpon, kelas, keterangan ) {
+  await updateDoc(doc(db, "absensi", docId), {
+  
+   tanggal: tanggal,
+   nis: nis,
+   nama: nama,
+   alamat: alamat,
+   notlpon: noTlpon, 
+   kelas: kelas,
+   keterangan: keterangan
   });
 }
 
-export async function ambildatasiswa(docId) {
-  const docRef = await doc(db, "absensi-siswa", docId);
+export async function ambilAbsensi(docId) {
+  const docRef = await doc(db, "absensi", docId);
   const docSnap = await getDoc(docRef);
 
   return await docSnap.data();

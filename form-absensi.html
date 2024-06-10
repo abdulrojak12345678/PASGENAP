@@ -52,12 +52,12 @@
   <a href="index.html">lihat daftar absensi</a>
 
   <script type="module">
-    import { tambahdatasiswa } from './main.js';
+    import { tambahAbsensi } from './main.js';
 
     let tombolTamabah = document.getElementById('tombol-tambah');
     let elementanggal = document.getElementById('input-nama');
     let elemennis = document.getElementById('input-nis');
-    let elemennama = document.getElementById('input-nama');
+    let elemenNama = document.getElementById('input-Nama');
     let elemenalamat = document.getElementById('input-alamat');
     let elemennoTlpon = document.getElementById('input-noTlpon');
     let elemenkelas = document.getElementById('input-kelas');
@@ -68,9 +68,8 @@
       e.preventDefault();
       tombolTamabah.setAttribute('disabled', 'disabled');
       loader.style.display = "block";
-
-      await tambahdatasiswa(elementanggal.value, elemennis.value, elemenNama.value, elemenalamat.value, elemennoTlpon.value, elemenkelas.value, elemenketerangan.value);
-      window.location, href = 'index.html';
+     await tambahAbsensi(elementanggal.value, elemennis.value, elemenNama.value, elemenAlamat.value, elemenNoTlpn.value, elemenKelas.value, elemenKeterangan.value);
+      window.location.href = 'index.html'
     });
   </script>
 

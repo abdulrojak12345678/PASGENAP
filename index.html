@@ -39,7 +39,7 @@
     </tbody>
   </table>
   <img src="loader.gif" style="width: 1.8em; display: block" id="loader">
-  <a href="form-absensi siswa.html"></a>
+  <a href="form-absensi.html"></a>
 
   <script type="module">
     import { ambilDaftarAbsensi, formatangka, hapusabsensi } from './main.js';
@@ -75,7 +75,7 @@
       $('.tombol-hapus').click(async function() {
         $(this).attr('disebled', 'disebled');
         $('#' + $(this).attr('data')).show();
-        await hapusabsesnsi($(this).attr('data'));
+        await hapusabsensi($(this).attr('data'));
         location.reload();
       });
    $('.link-ubah').click(async function() {
