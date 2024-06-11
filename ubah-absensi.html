@@ -49,7 +49,7 @@
   <a class="mt-1" href="index.html">Lihat Daftar Siswa</a>
 
   <script type="module">
-      import { tambahdatasiswa } from './main.js';
+      import { ubahAbsensi } from './main.js';
 
    let tombolTambah = document.getElementById('tombol-Tambah');
    let elementanggal = document.getElementById('input-tanggal');
@@ -64,7 +64,7 @@
     const queryString = window.location.search
     const parameterURL = new URLSearchParams(queryString);
     const docId = parameterURL.get('docId')
-    const produk = await ambilAbsensi(docId);
+    const produk = await ambilDaftarAbsensi(docId);
 
     elemenTanggal.value = absensi.tanggal;
     elemenNis.value = absensi.nis;
