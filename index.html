@@ -42,11 +42,11 @@
   <a href="form-absensi.html"></a>
 
   <script type="module">
-    import { ambilDaftarAbsensi, formatangka, hapusabsensi } from './main.js';
+    import { ambilDaftarabsensi, formatangka, hapusabsensi } from './main.js';
 
     $(document).ready(async function() {
       let elemenDaftar = $("#daftar-absensi > tbody")
-      let daftarAbsensi = await ambilDaftarAbsensi();
+      let daftarAbsensi = await ambilDaftarabsensi();
       let nomor = 1;
 
       daftarAbsensi.forEach((data) => {

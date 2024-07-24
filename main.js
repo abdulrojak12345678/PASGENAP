@@ -72,7 +72,7 @@ export async function hapusabsensi (docId) {
   await deleteDoc(doc(db,"absensi",docId));
 }
 
-export async function ubahabsensi(docid, tanggal, nis, nama, alamat, noTlpon, kelas, keterangan ) {
+export async function ubahAbsensi(docid, tanggal, nis, nama, alamat, noTlpon, kelas, keterangan ) {
   await updateDoc(doc(db, "absensi", docId), {
   
    tanggal: tanggal,
@@ -85,7 +85,7 @@ export async function ubahabsensi(docid, tanggal, nis, nama, alamat, noTlpon, ke
   });
 }
 
-export async function ambilDaftarAbsensi(docId) {
+export async function ambilabsensi(docId) {
   const docRef = await doc(db, "absensi", docId);
   const docSnap = await getDoc(docRef);
 
