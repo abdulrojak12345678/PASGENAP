@@ -52,22 +52,24 @@
       daftarAbsensi.forEach((data) => {
         elemenDaftar.append(
           '<tr>'+
-          '<th>'+ nomor + '<th>' +
-          '<td>'+ data.tanggal + '<td>'+
-          '<th>' + data.nis + '</th>' +
+          '<th>'+ nomor + '</th>' +
+          '<td>'+ data.tanggal + '</td>'+
+          '<td>' + data.nis + '</td>' +
           '<td>' + data.nama + '</td>' +
           '<td>' + data.alamat + '</td>'+
           '<td>' + data.noTlpon  + '</td>' +
           '<td>' + data.kelas + '</td>' +
           '<td>' + data.keterangan + '</td>'+
-          '<td>' + ' <a href="#" class="me-2 link-ubah"  data="' +
-          data.id +
-          '">ubah</a> ' + '<button class="btn btn-danger tombol-hapus" data ="' + data.id + '">hapus</button>' +
-          '<img src="loader.gif" style="width: 1em; display: none" id="' + data.id + '">' +
+         '<td>' 
+  
+          
+       + ' <a href="#" class="me-2 link-ubah"  data="' +
+         data.id +
+         '">ubah</a> ' + '<button class="btn btn-danger tombol-hapus" data ="' + data.id + '">hapus</button>'  +
           '</td>' +
           '</tr>'
         );
-        nomor = nomor + 1;
+        nomor = nomor + 1; 
 
       });
       $('#loader').hide();

@@ -51,7 +51,7 @@ export function formatangka(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-export async function tambahDaftarAbsensi(tanggal, nis, nama, alamat, noTlpon, kelas, keterangan) {
+export async function tambahAbsensi(tanggal, nis, nama, alamat, noTlpon, kelas, keterangan) {
   try {
     const dokRef = await addDoc(collection(db,'absensi'),{
    tanggal: tanggal,
@@ -72,7 +72,7 @@ export async function hapusabsensi (docId) {
   await deleteDoc(doc(db,"absensi",docId));
 }
 
-export async function ubahAbsensi(docid, tanggal, nis, nama, alamat, noTlpon, kelas, keterangan ) {
+export async function ubahAbsensi(docId, tanggal, nis, nama, alamat, noTlpon, kelas, keterangan ) {
   await updateDoc(doc(db, "absensi", docId), {
   
    tanggal: tanggal,

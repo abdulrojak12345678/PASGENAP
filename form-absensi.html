@@ -59,22 +59,22 @@
     let elemenNis = document.getElementById('input-nis');
     let elemenNama = document.getElementById('input-nama');
     let elemenAlamat = document.getElementById('input-alamat');
-    let elemenNoTlpon = document.getElementById('input-noTlpon');
+    let elemenNoTlpn = document.getElementById('input-noTlpon');
     let elemenKelas = document.getElementById('input-kelas');
     let elemenketerangan = document.getElementById('input-keterangan');
     let loader = document.getElementById('loader');
 
-    tombolTambah.addEventListener('click', async function(e) {
-      e.preventDefault();
-      
-       loader.style.display = "block";
-      
-      tombolTambah.addEventListener('click', async function(e) {
-      e.preventDefault();
-      await tambahAbsensi(elemenTanggal.value, elemenNis.value, elemenNama.value, elemenAlamat.value, elemenNoTlpn.value, elemenKelas.value, elemenKeterangan.value);
-      window.location.href = 'index.html';
-    });
-    </script>
+   // tombolTambah.addEventListener('click', async function(e) {
+   //         e.preventDefault();
+
+         //   loader.style.display = "block";
+
+            tombolTambah.addEventListener('click', async function(e) {
+              e.preventDefault();
+              await tambahAbsensi(elemenTanggal.value, elemenNis.value, elemenNama.value, elemenAlamat.value, elemenNoTlpn.value, elemenKelas.value, elemenketerangan.value);
+              window.location.href = 'index.html';
+            });
+  </script>
 
 </body>
 

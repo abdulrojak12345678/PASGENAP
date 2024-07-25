@@ -42,7 +42,7 @@
       <input type="text" class="form-control" id="input-keterangan">
     </div>
     
-    <button type="submit" class="btn btn-primary" id="tombol-ubah">ubah</button>
+    <button type="submit" class="btn btn-primary" id="tombolubah">ubah</button>
     <img src="loader.gif" style="width: 1em; display: none" id="loader">
   </form>
 
@@ -64,19 +64,19 @@
     const queryString = window.location.search
     const parameterURL = new URLSearchParams(queryString);
     const docId = parameterURL.get('docId')
-    const Absensi = await ambilabsensi (docId);
+    const absensi = await ambilabsensi (docId);
 
     elementanggal.value = absensi.tanggal;
-    elemenNis.value = absensi.nis;
-    elemenNama.value = absensi.nama;
-    elemenAlamat.value = absensi.alamat;
-    elemenNoTlpn.value = absensi.noTlpn;
-    elemenKelas.value = absensi.kelas;
-    elemenKeterangan.value = absensi.keterangan;
+    elemennis.value = absensi.nis;
+    elemennama.value = absensi.nama;
+    elemenalamat.value = absensi.alamat;
+    elemennoTlpon.value = absensi.noTlpon;
+    elemenkelas.value = absensi.kelas;
+    elemenketerangan.value = absensi.keterangan;
 
-    tombolUbah.addEventListener('click', async function(el) {
+    tombolubah.addEventListener('click', async function(el) {
       el.preventDefault();
-      await ubahAbsensi(docId, elementanggal.value,elemennis.value,elemenNama.value, elemenalamat.value, elemennTlpon.value, elemenkelas.value, elemenketerangan.value);
+      await ubahAbsensi(docId, elementanggal.value,elemennis.value,elemennama.value, elemenalamat.value, elemennoTlpon.value, elemenkelas.value, elemenketerangan.value);
       window.location.href = 'index.html';
     });
   </script>
