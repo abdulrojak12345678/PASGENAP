@@ -14,6 +14,21 @@
 
 
 <body class="m-3">
+  
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    tambah
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active" href="index.html">kembali ke beranda</a></li>
+  </ul>
+</div>
+  
+  
+  
+  
+  
+  
   <h1>Form absensi</h1>
 
   <form class="mb-3">
@@ -64,10 +79,6 @@
     let elemenketerangan = document.getElementById('input-keterangan');
     let loader = document.getElementById('loader');
 
-  // tombolTambah.addEventListener('click', async function(e) {
-         // e.preventDefault();
-
-          //  loader.style.display = "block";
 
             tombolTambah.addEventListener('click', async function(e) {
               e.preventDefault();
@@ -76,6 +87,14 @@
             });
   </script>
 
+    <footer class="py-3 bg-dark-subtle mt-auto">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary"></a></li>
+      <li class="nav-item"><a href="#" id="link-login" class="nav-link px-2 text-body-secondary"></a></li>
+   
+    </ul>
+    <p class="text-center text-body-secondary">&copy; absensi kelas smk plus insan cemerlang 2024</p>
+  </footer>
 </body>
 
 </html>
