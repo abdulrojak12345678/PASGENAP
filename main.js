@@ -58,7 +58,7 @@ export async function tambahAbsensi(tanggal, nis, nama, alamat, noTlpon, kelas, 
    nis: nis,
    nama: nama,
    alamat: alamat,
-   notlpon: noTlpon, 
+   noTlpon: noTlpon, 
    kelas: kelas,
    keterangan: keterangan
     });
@@ -79,7 +79,7 @@ export async function ubahAbsensi(docId, tanggal, nis, nama, alamat, noTlpon, ke
    nis: nis,
    nama: nama,
    alamat: alamat,
-   notlpon: noTlpon, 
+   noTlpon: noTlpon, 
    kelas: kelas,
    keterangan: keterangan
   });
